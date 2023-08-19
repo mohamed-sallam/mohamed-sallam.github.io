@@ -22,8 +22,8 @@ button {
 
 blockquote {
     margin: 0;
-    padding-right: 16px;
-    padding-left: 16px;
+    padding-right: 6vw;
+    padding-left: 6vw;
 }
   
 blockquote p {
@@ -54,13 +54,13 @@ blockquote p::after {
 
 .header-section {
     background-color: #1f2937;
+    padding-top: 16px;
 }
 
 header {
     display: flex;
     flex-direction: column;
     gap: 64px;
-    padding: 16px 16px 0;
     max-width: 1000px;
 }
 
@@ -210,8 +210,6 @@ nav a {
     align-items: center;
     padding: 32px 64px;
     box-sizing: border-box;
-    margin-right: 16px;
-    margin-left: 16px;
     gap: 16px;
 }
 
