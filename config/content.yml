@@ -1,0 +1,349 @@
+# ============================================
+# Portfolio Configuration
+# ============================================
+# This is the main configuration file for your portfolio.
+# Edit this file to customize your content.
+# See DOCUMENTATION.md for full schema reference.
+
+# --------------------------------------------
+# Site Settings
+# --------------------------------------------
+site:
+  # Available themes: liquid-glass, dark-hacker, windows-me, retro-japanese, scientific, professional
+  theme: "windows-me"
+  # Cache version: Change this number to invalidate all cached data (set to 0 to disable caching)
+  cache_version: 4
+  
+# --------------------------------------------
+# Page Toggles
+# Set to false to disable entire pages
+# --------------------------------------------
+pages:
+  projects: true
+  courses: true
+  articles: false
+
+# --------------------------------------------
+# Home Page Sections
+# Control order and visibility of sections
+# Reorder this list to change section order on homepage
+# --------------------------------------------
+home_sections:
+  - id: "hero"
+    enabled: true
+  - id: "social_links"
+    enabled: true
+  - id: "summary"
+    enabled: true
+  - id: "skills"
+    enabled: true
+  - id: "projects"
+    enabled: true
+  - id: "courses"
+    enabled: true
+  - id: "work_experience"
+    enabled: true
+  - id: "education"
+    enabled: true
+  - id: "publications"
+    enabled: false
+
+# --------------------------------------------
+# Profile Information
+# --------------------------------------------
+profile:
+  name: "Mohamed Sallam"
+  title: "Back-end Engineer"
+  photo: "https://avatars.githubusercontent.com/u/59128458"
+  summary: |
+    A fresh Computer & Systems Engineering graduate with a strong foundation in software engineering 
+    fundamentals—clean code, robust architecture, design patterns, and solving complex problems with 
+    clarity and simplicity. I've built a front-end authoring tool for a nationally funded LLMS project, 
+    developed reusable Qt/C++ and PySide2 components for ADT used by thousands worldwide, and contributed 
+    to migrating legacy systems across Python, PySide2, Qt/C++, and Spring/Java. I also developed simple 
+    backend CRUD systems during a Java/Spring Boot bootcamp, applying clean architecture principles and 
+    design patterns.
+
+# --------------------------------------------
+# Skills Configuration
+# --------------------------------------------
+skills:
+  # If true, skills are auto-generated from tags in projects, courses, etc.
+  auto_generate: true
+  # Maximum number of skills to display
+  max_count: 20
+  # Override with manual list (only used if auto_generate is false or as fallback)
+  manual_skills:
+    - Java
+    - Spring Boot
+    - Python
+    - C++
+    - Qt
+    - Design Patterns
+    - Clean Architecture
+    - REST APIs
+    - Git/GitHub
+    - Object-Oriented Design
+
+# --------------------------------------------
+# Social Links
+# Supported platforms: github, linkedin, stackoverflow, leetcode, twitter, 
+#                      email, phone, cv, website
+# --------------------------------------------
+social_links:
+  - platform: "github"
+    url: "https://github.com/mohamed-sallam"
+    label: "GitHub"
+    
+  - platform: "linkedin"
+    url: "https://www.linkedin.com/in/muhd-sallam/"
+    label: "LinkedIn"
+    
+  - platform: "email"
+    value: "muhd.sallam@gmail.com"
+    label: "Email"
+
+# --------------------------------------------
+# Work Experience
+# --------------------------------------------
+work_experience:
+  - company: "Master Micro"
+    role: "Part-Time Software Engineer"
+    period: "Sep 2022 - Sep 2023"
+    linkedin_url: "https://www.linkedin.com/company/master-micro"
+    website_url: "https://www.master-micro.com/"
+    description: |
+      Worked on the development of an Analog Designer's Toolbox (ADT), a tool found application in 
+      thousands of users across USA, China, India, Egypt, and more. Designed to automate the process 
+      of analog circuit design. Created reusable components for Qt/C++ front-end, applied object-oriented 
+      design concepts and design patterns. Migrated GUI widgets from Qt/C++ to PySide2 and backend code 
+      from Python to Spring/Java.
+    tags:
+      - Java
+      - Spring
+      - C++
+      - Qt
+      - PySide2
+      - Python
+      - Design Patterns
+      - Git/GitHub
+      
+  - company: "Master Micro"
+    role: "Software Engineer Intern"
+    period: "Jul 2022 - Sep 2022"
+    linkedin_url: "https://www.linkedin.com/company/master-micro"
+    website_url: "https://www.master-micro.com/"
+    description: |
+      Started full-time internship working on ADT. Created reusable components using C++ STL. 
+      Learned and performed programming principles (KISS, YAGNI, DRY). Rewarded for outstanding 
+      performance and promoted to Part-Time position.
+    tags:
+      - C++
+      - Qt
+      - Algorithms
+      - Data Structures
+      - OOP
+      
+  - company: "WRL - Wireless Research Lab"
+    role: "Research Developer"
+    period: "Sep 2021 - Aug 2022"
+    linkedin_url: "https://www.linkedin.com/company/cardi-lab"
+    description: |
+      Worked on the Laboratory Learning Management System (LLMS) project, a tool to facilitate the 
+      creation of laboratory educational materials, supported by a grant of over 3 million EGP from 
+      the Academy of Scientific Research and Technology in Egypt. Led the front-end team and created 
+      an easy-to-use e-learning materials authoring tool.
+    tags:
+      - Angular
+      - TypeScript
+      - JavaScript
+      - HTML/CSS
+
+# --------------------------------------------
+# Education
+# --------------------------------------------
+education:
+  - institution: "Faculty of Engineering, Helwan University"
+    degree: "B.Sc. in Computer and Systems Engineering"
+    period: "Sep 2019 - May 2024"
+    description: |
+      Bachelor of Science in Electronics, Communications and Computer Engineering - Computer and 
+      Systems Engineering, grade: 80.05%. Graduation Project: Lin-K-it (grade: A+) - A functional 
+      prototype to replace expensive ELVIS Emona Communications Boards, reducing costs by 34,000%.
+    tags:
+      - Computer Science
+      - Software Engineering
+      - System Design
+
+# --------------------------------------------
+# Projects
+# --------------------------------------------
+projects:
+  # If true, fetches title/description/tags from GitHub repos automatically
+  auto_fetch_github: true
+  
+  items:
+    - title: "Banque of Egypt"
+      description: "A simple CRUD middleware web application that manages transactions between banks. Developed during a 15-day Java/Spring Boot bootcamp by Egyptian Banking Institute. Led the team and implemented transactions feature using the command pattern."
+      github_url: "https://github.com/mohamed-sallam/BanqueOfEgypt"
+      tags:
+        - Spring Boot
+        - Spring MVC
+        - Spring Data JPA
+        - MySQL
+        - Clean Architecture
+        - Design Patterns
+      featured: true
+      
+    - title: "StateLang"
+      description: "A fork of State Machine Compiler (CC_SMC) by Uncle Bob. Enhanced SMC by adding support for diagramming languages such as PlantUML and Mermaid. Developed module to simplify inheritance tree using complex data structures and algorithms."
+      github_url: "https://github.com/StateLang/StateLang"
+      tags:
+        - Java
+        - Compiler Design
+        - Design Patterns
+        - UML
+      featured: true
+      
+    - title: "LeetStream"
+      description: "A static website for daily LeetCode practice with 26 coding patterns. Implemented custom spaced repetition algorithm and a lightweight ReactJS-like component utility using web components."
+      github_url: "https://github.com/LeetStream/leetstream.github.io"
+      image: "assets/leetStream.png"
+      tags:
+        - JavaScript
+        - HTML/CSS
+        - Algorithms
+        - Web Components
+      featured: true
+      
+    - title: "Al-Miqata"
+      description: "Cost-effective, free and open-source digital Islamic wall clock with prayer times. Translated JavaScript prayer times library into C with embedded-C optimizations."
+      github_url: "https://github.com/mohamed-sallam/Al-Miqata"
+      image: "assets/Al-miqata.png"
+      tags:
+        - C
+        - Embedded Systems
+        - Circuit Design
+      featured: true
+      
+    - title: "Awb"
+      description: "Free and Open Source Android App to quit digital addiction. Led the team from requirement gathering (SRS) through design (CRC cards, ERD, DFD, UML diagrams) to implementation."
+      github_url: "https://github.com/mohamed-sallam/awb-android"
+      image: "assets/Awb.png"
+      tags:
+        - Android
+        - Java
+        - MVVM
+        - Software Engineering
+        - Scrum
+      featured: true
+
+# --------------------------------------------
+# Courses
+# --------------------------------------------
+courses:
+  items:
+    - title: "Java/Spring Boot Bootcamp"
+      provider: "Egyptian Banking Institute"
+      image: "assets/java_cert.png"
+      tags:
+        - Java
+        - Spring Framework
+        - Spring Boot
+        - Spring Data JPA
+        - Spring Security
+        - Spring MVC
+        - Clean Architecture
+      completed: "2024"
+      
+    - title: "CS50x 2020"
+      provider: "Harvard University"
+      url: "https://cs50.harvard.edu/x/2020"
+      tags:
+        - C
+        - Python
+        - Algorithms
+        - Data Structures
+        - Web Development
+      
+    - title: "C++ From Beginner to Beyond"
+      provider: "Udemy"
+      url: "https://www.udemy.com/course/beginning-c-plus-plus-programming/"
+      tags:
+        - C++
+        - OOP
+        - STL
+      
+    - title: "Shell Workshop"
+      provider: "Udacity"
+      url: "https://www.udacity.com/course/shell-workshop--ud206"
+      tags:
+        - Shell
+        - Linux
+        - Command Line
+      
+    - title: "Algorithms Part I"
+      provider: "Coursera"
+      url: "https://www.coursera.org/learn/algorithms-part1"
+      tags:
+        - Algorithms
+        - Data Structures
+        - Java
+        
+    - title: "Algorithms Part II"
+      provider: "Coursera"
+      url: "https://www.coursera.org/learn/algorithms-part2"
+      tags:
+        - Algorithms
+        - Graphs
+        - Java
+        
+    - title: "Object-Oriented Design"
+      provider: "Coursera"
+      url: "https://www.coursera.org/learn/object-oriented-design"
+      tags:
+        - OOP
+        - UML
+        - Software Design
+        
+    - title: "Design Patterns"
+      provider: "Coursera"
+      url: "https://www.coursera.org/learn/design-patterns"
+      tags:
+        - Design Patterns
+        - OOP
+        - Software Architecture
+        
+    - title: "SOLID Principles Video Series"
+      provider: "CleanCoders.com"
+      url: "https://cleancoders.com/series/clean-code"
+      tags:
+        - SOLID
+        - Clean Code
+        - Software Design
+        
+    - title: "Design Patterns Video Series"
+      provider: "CleanCoders.com"
+      url: "https://cleancoders.com/series/clean-code"
+      tags:
+        - Design Patterns
+        - Clean Code
+        - Refactoring
+        
+    - title: "Fundamentals of Database Engineering"
+      provider: "Udemy"
+      url: "https://www.udemy.com/course/database-engines-crash-course/"
+      tags:
+        - Databases
+        - SQL
+        - Database Design
+        - Performance
+
+# --------------------------------------------
+# Publications / Articles
+# --------------------------------------------
+publications:
+  # If true, fetches title/image from article URLs automatically
+  auto_fetch_metadata: true
+  
+  items: []

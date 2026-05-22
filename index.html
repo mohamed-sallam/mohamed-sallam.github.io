@@ -2,142 +2,200 @@
 <html lang="en">
 
 <head>
-	<title>Mohamed Sallam's Portfolio</title>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Backend Software Engineer Portfolio">
+    <meta name="author" content="">
+    <title>Portfolio</title>
+
+    <!-- Default theme (will be overridden by JS) -->
+    <link id="theme-stylesheet" rel="stylesheet" href="themes/dark-hacker.css">
+
+    <!-- js-yaml for YAML parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
 </head>
 
 <body>
-	<div class="header-section section">
-		<header>
-			<nav>
-				Mohamed Sallam's Portfolio
-				<ul>
-					<li><a href="#">GitHub</a></li>
-					<li><a href="#">LinkedIn</a></li>
-					<li><a href="#">Email</a></li>
-				</ul>
-			</nav>
+    <div id="app">
+        <!-- Navigation Bar (always visible) -->
+        <nav id="navbar" class="navbar">
+            <div class="nav-brand">
+                <span id="nav-name"></span>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="projects.html" class="nav-link" id="nav-projects">Projects</a>
+                <a href="courses.html" class="nav-link" id="nav-courses">Courses</a>
+                <a href="articles.html" class="nav-link" id="nav-articles">Articles</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
 
-			<div class="hero">
-				<div class="brief">
-					<div class="title">A Software Engineering Enthusiast</div>
-					<div class="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut efficitur
-						accumsan
-						convallis. Etiam et auctor tortor.</div>
-					<button class="contact">Contact</button>
-				</div>
-				<img class="hero-photo" src="img/pexels-programming.jpg"
-					alt="Photo by Pixabay: https://www.pexels.com/photo/computer-c-code-276452/">
-			</div>
-		</header>
-	</div>
+        <!-- Main Content -->
+        <main id="main-content">
+            <!-- Hero Section (with integrated skills and summary) -->
+            <section id="hero" class="section hero-section">
+                <div class="hero-content">
+                    <div class="profile-image-container">
+                        <img id="profile-photo" src="" alt="Profile Photo" class="profile-photo">
+                    </div>
+                    <h1 id="profile-name" class="profile-name"></h1>
+                    <p id="profile-title" class="profile-title"></p>
 
-	<div class="projects-section section">
-		<div>
-			<div class="section-title">Highlighted Projects</div>
-			<div class="projects">
-				<a class="project" href="https://github.com/mohamed-sallam/awb-android">
-					<img class="project-img"
-						src="https://github.com/mohamed-sallam/awb-android/blob/main/assets/logo.png?raw=true">
-					<div class="project-name">
-						Awb | Quit Digital Addiction
-					</div>
-					<div class="project-description">
-						A free and open-source Android app to quit digital addiction.
-					</div>
-					<ul class="project-skills">
-						<li>Java</li>
-						<li>SQL</li>
-						<li>Android Development</li>
-						<li>OOD</li>
-						<li>Design Patterns</li>
-					</ul>
-				</a>
+                    <!-- Skills integrated into hero -->
+                    <div class="hero-skills" id="skills-container">
+                        <!-- Populated by JS -->
+                    </div>
 
-				<a class="project" href="https://github.com/mohamed-sallam/Al-Miqata">
-					<img class="project-img" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Salat_times.svg"
-						alt="Hadysylmy, CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0, via Wikimedia Commons">
-					<div class="project-name">
-						Al-Miqata | A Clock for Islamic Prayer Times
-					</div>
-					<div class="project-description">
-						A cost-effective embedded system solution for Islamic prayer times
-					</div>
-					<ul class="project-skills">
-						<li>C</li>
-						<li>Embedded Systems</li>
-						<li>AVR MC</li>
-						<li>Modularity</li>
-					</ul>
-				</a>
+                    <!-- Summary integrated into hero -->
+                    <div class="hero-summary">
+                        <p id="profile-summary"></p>
+                    </div>
+                </div>
+            </section>
 
-				<a class="project" href="https://github.com/mohamed-sallam/Al-Mowaqqt">
-					<img class="project-img" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Salat_times.svg"
-						alt="Hadysylmy, CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0, via Wikimedia Commons">
-					<div class="project-name">
-						Al-Mowaqqt | Al-Miqata Controller
-					</div>
-					<div class="project-description">
-						A desktop application to set Al-Miqata settings.
-					</div>
-					<ul class="project-skills">
-						<li>Java</li>
-						<li>OOD</li>
-						<li>Design Patterns</li>
-						<li>Swing</li>
-					</ul>
-				</a>
+            <!-- Social Links Section -->
+            <section id="social_links" class="section social-links-section">
+                <div class="social-links-container" id="social-links-container">
+                    <!-- Populated by JS -->
+                </div>
+            </section>
 
-				<a class="project">
-					<img class="project-img"
-						src="https://github.com/mohamed-sallam/awb-android/blob/main/assets/logo.png?raw=true">
-					<div class="project-name">
-						Dummy App
-					</div>
-					<div class="project-description">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut efficitur
-						accumsan
-						convallis. Etiam et auctor tortor.
-					</div>
-					<ul class="project-skills">
-						<li>C++</li>
-						<li>Qt</li>
-					</ul>
-				</a>
-			</div>
-		</div>
-	</div>
+            <!-- Work Experience Section -->
+            <section id="work_experience" class="section experience-section">
+                <h2 class="section-title">Work Experience</h2>
+                <div class="timeline" id="work-experience-container">
+                    <!-- Populated by JS -->
+                </div>
+            </section>
 
-	<div class="quote-section section">
-		<div class="quote">
-			<blockquote>
-				<p>Every container becomes cramped by what is placed therein, except the container that holds knowledge, for verily it expands because of it.</p>
-				<footer>—Imam Ali PBUH</footer>
-			</blockquote>
-		</div>
-	</div>
+            <!-- Education Section -->
+            <section id="education" class="section education-section">
+                <h2 class="section-title">Education</h2>
+                <div class="timeline" id="education-container">
+                    <!-- Populated by JS -->
+                </div>
+            </section>
 
-	<div class="contact-section section">
-		<div class="contact-card">
-			<div class="text">
-				<div class="primary-text">
-					Lorem ipsum dolor sit amet?
-				</div>
-				<div class="secondary-text">
-					Consectetur adipiscing elit. Ut efficitur
-					accumsan convallis. Etiam et auctor tortor.
-				</div>
-			</div>
-			<button class="contact">Contact</button>
-		</div>
-	</div>
+            <!-- Projects Section -->
+            <section id="projects" class="section projects-section">
+                <div class="section-header">
+                    <h2 class="section-title">Projects</h2>
+                    <a href="projects.html" class="see-more-link" id="projects-see-more">See All →</a>
+                </div>
+                <div class="horizontal-scroll-container">
+                    <div class="cards-container" id="projects-container">
+                        <!-- Skeleton cards shown while loading -->
+                        <div class="card skeleton-card">
+                            <div class="card-image skeleton-loading"></div>
+                            <div class="card-content">
+                                <h3 class="card-title skeleton-text">‎</h3>
+                                <p class="card-description skeleton-text skeleton-multiline">‎</p>
+                                <div class="card-tags">
+                                    <span class="tag skeleton-loading">‎‎‎‎</span>
+                                    <span class="tag skeleton-loading">‎‎‎‎‎</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card skeleton-card">
+                            <div class="card-image skeleton-loading"></div>
+                            <div class="card-content">
+                                <h3 class="card-title skeleton-text">‎</h3>
+                                <p class="card-description skeleton-text skeleton-multiline">‎</p>
+                                <div class="card-tags">
+                                    <span class="tag skeleton-loading">‎‎‎‎</span>
+                                    <span class="tag skeleton-loading">‎‎‎‎‎</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card skeleton-card">
+                            <div class="card-image skeleton-loading"></div>
+                            <div class="card-content">
+                                <h3 class="card-title skeleton-text">‎</h3>
+                                <p class="card-description skeleton-text skeleton-multiline">‎</p>
+                                <div class="card-tags">
+                                    <span class="tag skeleton-loading">‎‎‎‎</span>
+                                    <span class="tag skeleton-loading">‎‎‎‎‎</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-	<footer>
-		Copyright © Mohamed Sallam 2023
-	</footer>
+            <!-- Courses Section -->
+            <section id="courses" class="section courses-section">
+                <div class="section-header">
+                    <h2 class="section-title">Courses</h2>
+                    <a href="courses.html" class="see-more-link" id="courses-see-more">See All →</a>
+                </div>
+                <div class="horizontal-scroll-container">
+                    <div class="cards-container" id="courses-container">
+                        <!-- Skeleton cards shown while loading -->
+                        <div class="card skeleton-card">
+                            <div class="card-image skeleton-loading"></div>
+                            <div class="card-content">
+                                <h3 class="card-title skeleton-text">‎</h3>
+                                <p class="card-description skeleton-text skeleton-multiline">‎</p>
+                            </div>
+                        </div>
+                        <div class="card skeleton-card">
+                            <div class="card-image skeleton-loading"></div>
+                            <div class="card-content">
+                                <h3 class="card-title skeleton-text">‎</h3>
+                                <p class="card-description skeleton-text skeleton-multiline">‎</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Publications Section -->
+            <section id="publications" class="section publications-section">
+                <div class="section-header">
+                    <h2 class="section-title">Publications & Articles</h2>
+                    <a href="articles.html" class="see-more-link" id="publications-see-more">See All →</a>
+                </div>
+                <div class="horizontal-scroll-container">
+                    <div class="cards-container" id="publications-container">
+                        <!-- Skeleton cards shown while loading -->
+                        <div class="card skeleton-card">
+                            <div class="card-image skeleton-loading"></div>
+                            <div class="card-content">
+                                <h3 class="card-title skeleton-text">‎</h3>
+                                <p class="card-description skeleton-text skeleton-multiline">‎</p>
+                            </div>
+                        </div>
+                        <div class="card skeleton-card">
+                            <div class="card-image skeleton-loading"></div>
+                            <div class="card-content">
+                                <h3 class="card-title skeleton-text">‎</h3>
+                                <p class="card-description skeleton-text skeleton-multiline">‎</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p id="footer-text">© <span id="current-year"></span> • Built with passion</p>
+            </footer>
+        </main>
+    </div>
+
+    <!-- JavaScript Modules -->
+    <script src="js/icons.js"></script>
+    <script src="js/config-loader.js"></script>
+    <script src="js/github-fetcher.js"></script>
+    <script src="js/metadata-fetcher.js"></script>
+    <script src="js/skills-generator.js"></script>
+    <script src="js/content-renderer.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
